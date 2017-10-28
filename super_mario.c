@@ -24,13 +24,16 @@ int main(void)
        //installs #
        for(int x = 0 ;x <= j + widenColumn; x++)
        {
-           printf("#");
+          printf("#");
        }
        //prints the double spaces
        printf("  ");
 
+       //Makes sure that the correct number of # are printed per line
+       //tempHt uses height, tempHt-- reduces the varaible by one each run through the loop
+       //making it take longer before it returns to the orginal value of height which is when the loop stops.
        tempHt--;
-       for(int i = tempHt - widenColumn; i < height; i++)
+       for(int i = tempHt; i < height - widenColumn; i++)
        {
           printf("#");
        }
